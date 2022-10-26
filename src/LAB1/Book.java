@@ -1,52 +1,46 @@
 package LAB1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book {
 
-    String Name;
-    String Paragraph;
-    String Image;
-    String Table;
-
-    public Book(String name) {
-        Name = name;
+    String Title;
+    Author A;
+    List<Chapter> C = new ArrayList<Chapter>();
+    public Book(String title) {
+        Title = title;
 
     }
 
-    public String getName() {
-        return Name;
+    public String getTitle() {
+        return Title;
     }
 
-
-    public void createNewParagraph(String paragraph) {
-        Paragraph = paragraph;
-
-    }
-
-    public void createNewImage(String image) {
-         Image = image;
-    }
-
-    public void createNewTable(String table) {
-         Table = table;
-    }
-
-    public String getP() {
-        return Paragraph;
-    }
-    public String getI() {
-        return Image;
-    }
-    public String getT() {
-        return Table;
+    public void addAuthor(Author rpGheo) {
+        A = rpGheo;
     }
 
 
     public void print() {
 
 
-           System.out.print("Nume: "+ getName() + ", Paragraf: " + getP() +", Imagine: " +getI() +", Tabel: "+ getT());
+           System.out.print("Titlu: "+ getTitle() +" Autor: ");
+           A.print();
 
 
+    }
+
+
+    public int createChapter(String s) {
+        Chapter c =new Chapter(s);
+        C.add(c);
+        return C.indexOf(c);
+    }
+
+    public Chapter getChapter(int indexChapterOne) {
+
+        return C.get(indexChapterOne);
     }
 }
 
