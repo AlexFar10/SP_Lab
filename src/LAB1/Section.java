@@ -3,12 +3,15 @@ package LAB1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Image implements Element {
-    String ImageName;
+public class Section implements Element {
+    String Title;
     List<Element> L = new ArrayList();
+    Paragraph P;
+    Image I;
+    Table T;
 
-    public Image(String imageName) {
-        ImageName = imageName;
+    public Section(String title) {
+        Title = title;
     }
 
     @Override
@@ -33,11 +36,13 @@ public class Image implements Element {
             if (L.get(i) == e)
                 L.remove(e);
         }
+
     }
 
     @Override
     public void print() {
-        System.out.println(ImageName);
+        System.out.println(Title);
         L.stream().forEach(e -> e.print());
     }
 }
+

@@ -2,15 +2,15 @@ package LAB1;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class Book {
-
+public class Book extends Section {
     String Title;
     Author A;
-    List<Chapter> C = new ArrayList<Chapter>();
-    public Book(String title) {
-        Title = title;
+    List<Author> authors = new ArrayList<>();
+    List<Element> L = new ArrayList<>();
 
+    public Book(String title) {
+        super(title);
+        Title = title;
     }
 
     public String getTitle() {
@@ -19,28 +19,39 @@ public class Book {
 
     public void addAuthor(Author rpGheo) {
         A = rpGheo;
+        authors.add(A);
     }
 
+    public void getAuthor() {
+        for (Author x :
+                authors) {
+            x.print();
+        }
+
+    }
+
+    public void addContent(Paragraph paragraph) {
+        L.add(paragraph);
+    }
+
+    public void addContent(Section section) {
+        L.add(section);
+    }
+
+    public void addContent(Image image) {
+        L.add(image);
+    }
+
+    public void addContent(Table table) {
+        L.add(table);
+    }
 
     public void print() {
-
-
-           System.out.print("Titlu: "+ getTitle() +" Autor: ");
-           A.print();
-
-
-    }
-
-
-    public int createChapter(String s) {
-        Chapter c =new Chapter(s);
-        C.add(c);
-        return C.indexOf(c);
-    }
-
-    public Chapter getChapter(int indexChapterOne) {
-
-        return C.get(indexChapterOne);
+        System.out.print(
+                "Carte: " + Title + ",\n" +
+                        " Autori: ");
+        getAuthor();
+        super.print();
     }
 }
 
