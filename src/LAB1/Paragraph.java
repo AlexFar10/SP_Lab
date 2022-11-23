@@ -7,6 +7,14 @@ public class Paragraph implements Element {
     String Text;
     List<Element> L = new ArrayList();
 
+    public String getText() {
+        return Text;
+    }
+
+    public void setText(String text) {
+        Text = text;
+    }
+
     public Paragraph(String text) {
         Text = text;
     }
@@ -41,4 +49,11 @@ public class Paragraph implements Element {
     public void print() {
         System.out.println(Text);
     }
+
+    public void setAlignStrategy(AlignCenter alignCenter) {
+    }
+    public void setAlignStrategy(AlignRight alignRight) {
+    }public void setAlignStrategy(AlignLeft alignLeft) {
+    }
+
 }

@@ -5,10 +5,17 @@ import java.util.List;
 
 public class Image implements Element {
     String ImageName;
+    String Url;
+    ImageContent Content;
     List<Element> L = new ArrayList();
 
-    public Image(String imageName) {
-        ImageName = imageName;
+    public Image(String url) {
+
+        Url = url;
+    }
+
+    public ImageContent Content(){
+        return null;
     }
 
     @Override
