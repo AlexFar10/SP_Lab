@@ -9,4 +9,6 @@ public interface Element {
 
     void remove(Element e);
 
+    void accept(Visitor v);
+
 }

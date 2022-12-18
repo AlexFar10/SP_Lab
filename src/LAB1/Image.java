@@ -43,6 +43,11 @@ public class Image implements Element {
     }
 
     @Override
+    public void accept(Visitor v) {
+        v.visitImage(this);
+    }
+
+    @Override
     public void print() {
         System.out.println(ImageName);
         L.stream().forEach(e -> e.print());

@@ -1,20 +1,8 @@
 package LAB1;
 
-public class ImageProxy implements  Element{
+public class TableOfContent implements Element{
 
-    String Url;
-    Image realImage;
 
-    public ImageProxy(String url) {
-        Url = url;
-    }
-
-    public Image loadImage(){
-
-        if(realImage == null)
-           realImage= new Image(Url);
-        return realImage;
-    }
     @Override
     public void print() {
 

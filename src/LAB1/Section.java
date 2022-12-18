@@ -40,6 +40,11 @@ public class Section implements Element {
     }
 
     @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
+    }
+
+    @Override
     public void print() {
         System.out.println(Title);
         L.stream().forEach(e -> e.print());

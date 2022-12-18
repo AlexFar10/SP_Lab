@@ -46,6 +46,13 @@ public class Paragraph implements Element {
     }
 
     @Override
+    public void accept(Visitor v) {
+        for (Element e : this.L) {
+            e.accept(v);
+        }
+    }
+
+    @Override
     public void print() {
         System.out.println(Text);
     }
