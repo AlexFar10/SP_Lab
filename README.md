@@ -11,3 +11,6 @@ https://github.com/AlexFar10/SP_Lab/tree/c7685adf8d5af22c11a58acb55bf102cb035a10
 - Define and implement the Element interface
 
 Nota 10
+
+# Nota finala propusa:
+10
